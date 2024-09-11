@@ -44,6 +44,7 @@ public:
 	void fillinfo() {
 		PIB.fill();
 		birth.fill();
+		cout << "Введіть телефон,місце проживаня(через кому),країну,номер навчальної групи:" << endl;
 		cin >> fax >> city >> country >> group;
 
 	}
@@ -54,6 +55,19 @@ public:
 	}
 	
 };
+class mathPoint {
+private:
+	float x = 0, y = 0, z = 0;
+public:	
+	void InitPoint(float _x = 0, float _y = 0, float _z = 0) {
+		x = _x;
+		y = _y;
+		z = _z;
+	}
+	void SeePoint() {
+		printf("(%.2f, %.2f, %.2f)", x, y, z);
+	}
+};
 
 int main()
 {
@@ -63,6 +77,12 @@ int main()
 	Student no1;
 	no1.fillinfo();
 	no1.readinfo();
+	mathPoint point1;
+	float x, y, z;
+	printf("Введіть значення x,y,z:");
+	cin >> x >> y >> z;
+	point1.InitPoint(x, y, z);
+	point1.SeePoint();
 	
 
 	
