@@ -76,4 +76,11 @@ public:
 		}
 		
 	}
+	friend ostream& operator<<(ostream& output, Queue& que) {
+		for (size_t i = 0; i < que.length; i++)
+		{
+			cout << que.data[i];
+		}
+		return output;
+	}
 };
